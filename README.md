@@ -23,7 +23,61 @@ The system evolved through multiple design iterations, solving real architectura
 
 <hr>
 
-<h2>🔬 Research Journey</h2>
+<h2>📸 Experimental Output Sessions</h2>
+
+<p>
+Below are real execution snapshots demonstrating the hierarchical memory transitions during conversation.
+</p>
+
+<hr>
+
+<h3>1️⃣ Short-Term Memory Accumulation</h3>
+
+<p>
+Conversation grows until the token threshold is reached.  
+Short-term memory contains active conversational context.
+</p>
+
+<img src="output/short_term_memory.png" alt="Short Term Memory Screenshot" width="800">
+
+<hr>
+
+<h3>2️⃣ Long-Term Memory Archival Triggered</h3>
+
+<p>
+When accumulated summary exceeds threshold, it is stored into FAISS vector memory.
+Semantic cache is invalidated to prevent stale responses.
+</p>
+
+<img src="output/long_term_storage.png" alt="Long Term Memory Storage Screenshot" width="800">
+
+<hr>
+
+<h3>3️⃣ Short-Term Memory Cleared After Consolidation</h3>
+
+<p>
+After archival, short-term memory is cleared and replaced with the latest summary buffer.
+This simulates memory consolidation.
+</p>
+
+<img src="output/short_term_cleared.png" alt="Short Term Cleared Screenshot" width="800">
+
+<hr>
+
+<h3>4️⃣ Semantic Cache Demonstration</h3>
+
+<p>
+When a semantically similar query is asked, the system bypasses LLM generation and returns a cached response.
+Similarity score is displayed.
+</p>
+
+<img src="output/semantic_cache_hit.png" alt="Semantic Cache Screenshot" width="800">
+
+<hr>
+
+<hr>
+
+<h2>🔬 Journey</h2>
 
 <h3>Phase 1 — Short-Term Memory</h3>
 <p>
